@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', function(){
             if (ParadoxNumForElementRecord < ParadoxNumForElementLimt){
                 clickCountsTextarea.value +=`逆反程度不高\n`;
             }else{
-                clickCountsTextarea.value +=`逆反程度高,教育失败\n`;
+                clickCountsTextarea.value +=`逆反程度高,教育失\n`;
             }
             clickCountsTextarea.value +=`\n最终ta成为了:`;
             for (var index in clickCounter){
