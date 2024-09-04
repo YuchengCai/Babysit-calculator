@@ -7,13 +7,13 @@ document.addEventListener('DOMContentLoaded', function(){
 
     var ClickLimitForEveryButton = 20;
 
-    var TotalClickCounts = 28;
+    var TotalClickCounts = 0;
 
     var TotalClickCountLimit = 120;
 
     var HighFrequencyElementForClick = 12;
 
-    var ParadoxNumForElementRecord = 15;
+    var ParadoxNumForElementRecord = 0;
 
     var ParadoxNumForElementLimt = 10;
 
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function(){
         button.id = id; // 为按钮设置一个唯一的ID
 
         // 初始化点击次数
-        clickCounter[button.id] = 12;
+        clickCounter[button.id] = 0;
        
 
 
