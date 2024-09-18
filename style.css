@@ -14,9 +14,10 @@ body, html {
 
 .container {
     display: flex; /* 使用Flexbox布局 */
-    justify-content: space-around; /* 使子元素在主轴上均匀分布 */
+    flex-direction: column;
+    justify-content: center; /* 使子元素在主轴上均匀分布 */
     align-items: center; /* 使子元素在交叉轴上居中对齐 */
-    height: 100%; /* 使容器占满整个视口高度 */
+    height: 60vh; /* 使容器占满整个视口高度 */
 }
 
 .button-container {
@@ -41,16 +42,16 @@ button {
 
 #clickCountsTextarea {
     width: 700px; /* 文本框宽度占满容器宽度 */
-    height: 460px; /* 设置文本框高度 */
+    height: 400px; /* 设置文本框高度 */
     background: #ffffff; /* 背景色 */
-    border: 1px solid #050505; /* 边框 */
     padding: 10px; /* 内边距 */
     font-size: 30px; /* 字体大小 */
     resize: none; /* 禁止调整大小 */
+    border-width: 5px;
 }
 
 .nes-btn {
-    padding: 25px 80px;/*nes样式按钮大小*/
+    padding: 15px 70px;/*nes样式按钮大小*/
     font-size: 25px;
     
 
