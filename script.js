@@ -1,3 +1,6 @@
+
+
+ 
 document.addEventListener('DOMContentLoaded', function(){
     var buttonMatrix = document.querySelector('.button-container'); // 获取按钮矩阵容器
     var clickCountsTextarea = document.getElementById('clickCountsTextarea'); // 获取文本显示框
@@ -22,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function(){
         var button = document.createElement('button'); // 创建一个新的按钮元素
         button.textContent = text; // 设置按钮的文本内容
         button.id = id; // 为按钮设置一个唯一的ID
+        button.classList.add('nes-btn', 'is-primary');
 
         // 初始化点击次数
         clickCounter[button.id] = 0;

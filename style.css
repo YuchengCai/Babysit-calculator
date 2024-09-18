@@ -1,7 +1,15 @@
+@font-face {
+    font-family: 'Chinese-Zpix';
+    src: url('./asset/font/zpix.ttf') format('truetype');
+    font-weight: normal;
+    font-style:normal;
+    
+}
+
 body, html {
     height: 100%; /* 使body和html占满整个视口高度 */
     margin: 0; /* 移除默认的外边距 */
-    font-family: Arial, sans-serif; /* 设置默认字体 */
+    font-family: 'Chinese-Zpix',  'Press Start 2P', sans-serif; /* 设置默认字体 */
 }
 
 .container {
@@ -14,12 +22,12 @@ body, html {
 .button-container {
     display: grid; /* 使用网格布局来排列按钮 */
     grid-template-columns: repeat(3, 1fr); /* 创建3列，每列等宽 */
-    gap: 10px; /* 设置网格项之间的间隔 */
-    padding: 20px; /* 外边距 */
+    gap: 50px; /* 设置网格项之间的间隔 */
+    padding: 50px; /* 外边距 */
 }
 
 button {
-    padding: 10px 20px; /* 内边距 */
+    padding: 20px 40px; /* 内边距 */
     font-size: 16px; /* 字体大小 */
     cursor: pointer; /* 鼠标悬停时显示指针手势 */
     border: 1px solid #ddd; /* 边框 */
@@ -32,11 +40,19 @@ button {
 }
 
 #clickCountsTextarea {
-    width: 400px; /* 文本框宽度占满容器宽度 */
-    height: 200px; /* 设置文本框高度 */
+    width: 700px; /* 文本框宽度占满容器宽度 */
+    height: 460px; /* 设置文本框高度 */
     background: #ffffff; /* 背景色 */
-    border: 1px solid #ddd; /* 边框 */
+    border: 1px solid #050505; /* 边框 */
     padding: 10px; /* 内边距 */
-    font-size: 14px; /* 字体大小 */
+    font-size: 30px; /* 字体大小 */
     resize: none; /* 禁止调整大小 */
+}
+
+.nes-btn {
+    padding: 25px 80px;/*nes样式按钮大小*/
+    font-size: 25px;
+    
+
+
 }
