@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'Chinese-Zpix';
-    src: url('./asset/font/zpix.ttf') format('truetype');
+    /*src: url('https://yuchengcai.github.io/Babysit-calculator/asset/font/zpix.ttf') format('truetype');*/
+    src: url('./asset/font/zpix.ttf');
     font-weight: normal;
     font-style:normal;
     
@@ -17,18 +18,18 @@ body, html {
     flex-direction: column;
     justify-content: center; /* 使子元素在主轴上均匀分布 */
     align-items: center; /* 使子元素在交叉轴上居中对齐 */
-    height: 80vh; /* 使容器占满整个视口高度 */
+    height: 100%; /* 使容器占满整个视口高度 */
 }
 
 .button-container {
     display: grid; /* 使用网格布局来排列按钮 */
     grid-template-columns: repeat(3, 1fr); /* 创建3列，每列等宽 */
-    gap: 50px; /* 设置网格项之间的间隔 */
-    padding: 50px; /* 外边距 */
+    gap: 30px; /* 设置网格项之间的间隔 */
+    padding: 20px; /* 外边距 */
 }
 
 button {
-    padding: 20px 40px; /* 内边距 */
+    padding: 10px 40px; /* 内边距 */
     font-size: 16px; /* 字体大小 */
     cursor: pointer; /* 鼠标悬停时显示指针手势 */
     border: 1px solid #ddd; /* 边框 */
@@ -42,7 +43,7 @@ button {
 
 #clickCountsTextarea {
     width: 700px; /* 文本框宽度占满容器宽度 */
-    height: 400px; /* 设置文本框高度 */
+    height: 350px; /* 设置文本框高度 */
     background: #ffffff; /* 背景色 */
     padding: 10px; /* 内边距 */
     font-size: 30px; /* 字体大小 */
@@ -51,7 +52,7 @@ button {
 }
 
 .nes-btn {
-    padding: 15px 70px;/*nes样式按钮大小*/
+    padding: 1px 30px;/*nes样式按钮大小*/
     font-size: 25px;
     
 
