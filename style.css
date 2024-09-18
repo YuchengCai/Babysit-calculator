@@ -17,7 +17,7 @@ body, html {
     flex-direction: column;
     justify-content: center; /* 使子元素在主轴上均匀分布 */
     align-items: center; /* 使子元素在交叉轴上居中对齐 */
-    height: 60vh; /* 使容器占满整个视口高度 */
+    height: 80vh; /* 使容器占满整个视口高度 */
 }
 
 .button-container {
