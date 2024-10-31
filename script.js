@@ -4,6 +4,8 @@
 document.addEventListener('DOMContentLoaded', function(){
     var buttonMatrix = document.querySelector('.button-container'); // 获取按钮矩阵容器
     var clickCountsTextarea = document.getElementById('clickCountsTextarea'); // 获取文本显示框
+    
+
 
     // 计数器对象，用于存储每个按钮的点击次数
     var clickCounter = {};
@@ -12,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     var TotalClickCounts = 0;
 
-    var TotalClickCountLimit = 120;
+    var TotalClickCountLimit = 108;
 
     var HighFrequencyElementForClick = 12;
 
@@ -52,13 +54,13 @@ document.addEventListener('DOMContentLoaded', function(){
     ];
 
     function CheckStage(totalClicks) {
-        if(totalClicks === 29) return 2;
-        if (totalClicks < 30) return 1;
-        if(totalClicks === 59) return 4;
-        if (totalClicks < 60) return 3;
-        if(totalClicks === 89) return 6;
-        if (totalClicks < 90) return 5;
-        if (totalClicks < 120) return 7;
+        if(totalClicks === 17) return 2;
+        if (totalClicks < 18) return 1;
+        if(totalClicks === 47) return 4;
+        if (totalClicks < 48) return 3;
+        if(totalClicks === 77) return 6;
+        if (totalClicks < 78) return 5;
+        if (totalClicks < 108) return 7;
 
        
     }
@@ -111,6 +113,8 @@ document.addEventListener('DOMContentLoaded', function(){
             incrementCounterForPhaseFour(this.textContent, this.id);
 
         }
+        updateProgressBar(TotalClickCounts);
+
     
        
         
@@ -124,6 +128,15 @@ document.addEventListener('DOMContentLoaded', function(){
     buttons.forEach(function(buttonData) {
         createButton(buttonData.text, buttonData.id);
     });
+    updateProgressBar(0);
+
+
+    function updateProgressBar(progress){
+        var ProgressBar = document.getElementById('progress-bar');
+        var progressPercentage = (progress / TotalClickCountLimit) * 100;
+        ProgressBar.value = progressPercentage;
+
+    }
 
     // 通用的计数器方法，用于增加特定按钮的点击次数
     function incrementCounter(buttonId) {
