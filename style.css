@@ -15,10 +15,27 @@ body, html {
 
 .container {
     display: flex; /* 使用Flexbox布局 */
+    flex-direction: row;
+    justify-content: center; /* 使子元素在主轴上均匀分布 */
+    align-items: center; /* 使子元素在交叉轴上居中对齐 */
+    height: 100%; /* 使容器占满整个视口高度 */
+}
+.container-for-textand-button-and-gif {
+    display: flex; /* 使用Flexbox布局 */
     flex-direction: column;
     justify-content: center; /* 使子元素在主轴上均匀分布 */
     align-items: center; /* 使子元素在交叉轴上居中对齐 */
     height: 100%; /* 使容器占满整个视口高度 */
+
+}
+
+.container-for-gif {
+    display: flex; /* 使用Flexbox布局 */
+    flex-direction: column;
+    justify-content: center; /* 使子元素在主轴上均匀分布 */
+    align-items: center; /* 使子元素在交叉轴上居中对齐 */
+    height: 100%; /* 使容器占满整个视口高度 */
+    padding: 20px; /* 外边距 */
 }
 
 .button-gif-container {
@@ -27,10 +44,18 @@ body, html {
     justify-content: center; /* 使子元素在主轴上均匀分布 */
     align-items: center; /* 使子元素在交叉轴上居中对齐 */
     height: 100%; /* 使容器占满整个视口高度 */
+    
 }
 .button-container {
     display: grid; /* 使用网格布局来排列按钮 */
     grid-template-columns: repeat(3, 1fr); /* 创建3列，每列等宽 */
+    gap: 30px; /* 设置网格项之间的间隔 */
+    padding: 20px; /* 外边距 */
+}
+
+.buttongif-container {
+    display: grid; /* 使用网格布局来排列按钮 */
+    grid-template-columns: repeat(2, 1fr); /* 创建3列，每列等宽 */
     gap: 30px; /* 设置网格项之间的间隔 */
     padding: 20px; /* 外边距 */
 }
