@@ -64,6 +64,26 @@ document.addEventListener('DOMContentLoaded', function(){
 
        
     }
+
+    function AddcalculateTipsInStageEnd(StageNum){
+        var TipsInTextArea = document.getElementById('tips');
+        var listItem = document.createElement('li');
+
+
+        if(StageNum === 2){
+            listItem.textContent = "-孩子开始有自己的想法了,去努力引导孩子吧-";
+
+        }else if(StageNum === 4){
+            listItem.textContent = "-孩子不一定会按照你的想法做,做好心理准备-";
+
+        }else if(StageNum === 6){
+            listItem.textContent = "-孩子进入青春期了,注意孩子的叛逆反应-";
+
+        }
+
+        TipsInTextArea.appendChild(listItem);
+
+    }
         
             
     function buttonClickListen() {//核心过程
@@ -84,30 +104,33 @@ document.addEventListener('DOMContentLoaded', function(){
             updateTextareaForClickCountOnButton(this.textContent, this.id); // 更新文本显示框
     
         }else if(PhaseNum === 2){//当完成阶段1进入阶段2时
-            PhaseNum = 2;
+       
             incrementCounter(this.id); // 增加对应按钮的点击次数
             updateTextareaForClickCountOnButton(this.textContent, this.id); // 更新文本显示框
             updateTextareaForStageEnding(PhaseNum);
             outPutStageSummary(PhaseNum);
+            AddcalculateTipsInStageEnd(PhaseNum);
         
         }else if(PhaseNum === 3){//当前元素在阶段2时
             incrementCounterForPhaseTwo(this.textContent, this.id);
         
         }else if(PhaseNum === 4){//当完成阶段2进入阶段3时
-            PhaseNum = 3;
+    
             incrementCounterForPhaseTwo(this.textContent, this.id);
             updateTextareaForStageEnding(PhaseNum);
             outPutStageSummary(PhaseNum);
+            AddcalculateTipsInStageEnd(PhaseNum);
         
         }else if(PhaseNum === 5){//当前元素在阶段3时
             incrementCounterForPhaseThree(this.textContent, this.id);
     
         
         }else if(PhaseNum === 6){//当完成阶段3进入阶段4时
-            PhaseNum = 4;
+        
             incrementCounterForPhaseThree(this.textContent, this.id);
             updateTextareaForStageEnding(PhaseNum);
             outPutStageSummary(PhaseNum);
+            AddcalculateTipsInStageEnd(PhaseNum);
         
         }else if(PhaseNum === 7){//当前元素在阶段4时
             incrementCounterForPhaseFour(this.textContent, this.id);
