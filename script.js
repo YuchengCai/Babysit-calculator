@@ -68,6 +68,7 @@ document.addEventListener('DOMContentLoaded', function(){
     function AddcalculateTipsInStageEnd(StageNum){
         var TipsInTextArea = document.getElementById('tips');
         var listItem = document.createElement('li');
+        
 
 
         if(StageNum === 2){
@@ -81,6 +82,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
         }
 
+
+        TipsInTextArea.removeChild(TipsInTextArea.lastChild);
         TipsInTextArea.appendChild(listItem);
 
     }
