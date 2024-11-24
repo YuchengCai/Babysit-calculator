@@ -21,6 +21,7 @@ body, html {
     height: 100%; /* 使容器占满整个视口高度 */
     position: relative;/* 相对定位 */
     z-index: 1; /* 设置z-index为1，确保它在其他元素之上 */;
+    background-color:rgb(118, 121, 121);
     
 
 }
@@ -91,7 +92,7 @@ body, html {
     grid-template-columns: repeat(3, 1fr); /* 创建3列，每列等宽 */
     height: 100%;
     gap: 50px; /* 设置网格项之间的间隔 */
-    /*padding: 10px; /* 外边距 */
+    padding: 50px; /* 外边距 */
 }
 
 .video-container {
@@ -102,10 +103,8 @@ body, html {
 
 .video-container video {
    width: 80%;
-   transform: scale(0.85);
-   margin-top: -30px;
-   margin-left: -150px;
-   margin-right: -150px;
+   transform: scale(0.8);
+  
 }
 
 button {
@@ -131,10 +130,13 @@ button {
     border-width: 5px;
 }
 
-.nes-btn {
-    padding: 1px 30px;/*nes样式按钮大小*/
-    font-size: 25px;
+.nes-btn.is-primary{
+    padding: 10px 40px;/*nes样式按钮大小*/
+    font-size: 30px;
+    cursor: pointer; /* 鼠标悬停时显示指针手势 */
+    outline: none; /* 点击时不显示轮廓 */
     
+
 
 
 }
