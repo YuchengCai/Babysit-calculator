@@ -42,15 +42,15 @@ document.addEventListener('DOMContentLoaded', function(){
 
     // 定义一个数组，包含所有按钮的文本内容
     var buttons = [
-        {text:'按钮A', id:'btn1'},
-        {text:'按钮B', id:'btn2'},
-        {text:'按钮C', id:'btn3'},
-        {text:'按钮D', id:'btn4'},
-        {text:'按钮E', id:'btn5'},
-        {text:'按钮F', id:'btn6'},
-        {text:'按钮G', id:'btn7'},
-        {text:'按钮H', id:'btn8'},
-        {text:'按钮I', id:'btn9'}
+        {text:'Rational', id:'btn1'},
+        {text:'Benevolent', id:'btn2'},
+        {text:'Rigorous', id:'btn3'},
+        {text:'Explorative', id:'btn4'},
+        {text:'Self-Disciplined', id:'btn5'},
+        {text:'Seeking Victory', id:'btn6'},
+        {text:'Instinct-Driven', id:'btn7'},
+        {text:'Territorial Awareness', id:'btn8'},
+        {text:'Hotheaded', id:'btn9'}
     ];
 
     function CheckStage(totalClicks) {
@@ -87,7 +87,8 @@ document.addEventListener('DOMContentLoaded', function(){
         TipsInTextArea.appendChild(listItem);
 
     }
-        
+
+   
             
     function buttonClickListen() {//核心过程
 
