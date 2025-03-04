@@ -94,21 +94,20 @@ document.addEventListener('DOMContentLoaded', function(){
 
         PhaseNum = CheckStage(TotalClickCounts);
         
-
         if(clickCounter[this.id] >=ClickLimitForEveryButton){//当前元素点击数已满
             updateSignleButtonClickFull(this.textContent, this.id);
+        
         }else if(TotalClickCounts >= TotalClickCountLimit){//当前元素未满且总点击数满即进入阶段5时
             updateAllButtonClickFull(this.textContent, this.id);
             PhaseNum = 5;
             updateTextareaForAllEnd(PhaseNum);
             outPutStageSummary(PhaseNum);
-
+        
         }else if(PhaseNum === 1){//当前元素在阶段1
             incrementCounter(this.id); // 增加对应按钮的点击次数
             updateTextareaForClickCountOnButton(this.textContent, this.id); // 更新文本显示框
-    
+        
         }else if(PhaseNum === 2){//当完成阶段1进入阶段2时
-       
             incrementCounter(this.id); // 增加对应按钮的点击次数
             updateTextareaForClickCountOnButton(this.textContent, this.id); // 更新文本显示框
             updateTextareaForStageEnding(PhaseNum);
@@ -117,9 +116,8 @@ document.addEventListener('DOMContentLoaded', function(){
         
         }else if(PhaseNum === 3){//当前元素在阶段2时
             incrementCounterForPhaseTwo(this.textContent, this.id);
-        
+       
         }else if(PhaseNum === 4){//当完成阶段2进入阶段3时
-    
             incrementCounterForPhaseTwo(this.textContent, this.id);
             updateTextareaForStageEnding(PhaseNum);
             outPutStageSummary(PhaseNum);
@@ -127,10 +125,8 @@ document.addEventListener('DOMContentLoaded', function(){
         
         }else if(PhaseNum === 5){//当前元素在阶段3时
             incrementCounterForPhaseThree(this.textContent, this.id);
-    
         
         }else if(PhaseNum === 6){//当完成阶段3进入阶段4时
-        
             incrementCounterForPhaseThree(this.textContent, this.id);
             updateTextareaForStageEnding(PhaseNum);
             outPutStageSummary(PhaseNum);
@@ -138,8 +134,9 @@ document.addEventListener('DOMContentLoaded', function(){
         
         }else if(PhaseNum === 7){//当前元素在阶段4时
             incrementCounterForPhaseFour(this.textContent, this.id);
-
+        
         }
+        
         updateProgressBar(TotalClickCounts);
 
     
