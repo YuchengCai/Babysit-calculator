@@ -125,7 +125,7 @@ button {
     height: 350px; /* 设置文本框高度 */
     background: #ffffff; /* 背景色 */
     padding: 10px; /* 内边距 */
-    font-size: 30px; /* 字体大小 */
+    font-size: 20px; /* 字体大小 */
     resize: none; /* 禁止调整大小 */
     border-width: 5px;
 }

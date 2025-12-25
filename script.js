@@ -42,15 +42,15 @@ document.addEventListener('DOMContentLoaded', function(){
 
     // 定义一个数组，包含所有按钮的文本内容
     var buttons = [
-        {text:'Rational', id:'btn1'},
-        {text:'Benevolent', id:'btn2'},
-        {text:'Rigorous', id:'btn3'},
-        {text:'Explorative', id:'btn4'},
-        {text:'Self-Disciplined', id:'btn5'},
-        {text:'Seeking Victory', id:'btn6'},
-        {text:'Instinct-Driven', id:'btn7'},
-        {text:'Territorial Awareness', id:'btn8'},
-        {text:'Hotheaded', id:'btn9'}
+        {text:'Rational', id:'Rational'},
+        {text:'Benevolent', id:'Benevolent'},
+        {text:'Rigorous', id:'Rigorous'},
+        {text:'Explorative', id:'Explorative'},
+        {text:'Self-Disciplined', id:'Self-Disciplined'},
+        {text:'Seeking Victory', id:'Seeking Victory'},
+        {text:'Instinct-Driven', id:'Instinct-Driven'},
+        {text:'Territorial Awareness', id:'Territorial Awareness'},
+        {text:'Hotheaded', id:'Hotheaded'}
     ];
 
     function CheckStage(totalClicks) {
@@ -72,13 +72,13 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
         if(StageNum === 2){
-            listItem.textContent = "-孩子开始有自己的想法了,去努力引导孩子吧-";
+            listItem.textContent = "-The child has his own ideas. Try to guide him-";
 
         }else if(StageNum === 4){
-            listItem.textContent = "-孩子不一定会按照你的想法做,做好心理准备-";
+            listItem.textContent = "-Child may not necessarily do things as you expect, so be prepared-";
 
         }else if(StageNum === 6){
-            listItem.textContent = "-孩子进入青春期了,注意孩子的叛逆反应-";
+            listItem.textContent = "-The child has entered adolescence, so be aware of their rebellious-";
 
         }
 
@@ -261,27 +261,27 @@ document.addEventListener('DOMContentLoaded', function(){
 
     // 更新文本显示框内容的函数
     function updateTextareaForClickCountOnButton(buttonText, buttonId) {
-        ClickinfoForEveryButton = '点击了 ' + buttonText + '：' + clickCounter[buttonId] + ' 次\n';
+        ClickinfoForEveryButton = '\nClick ' + buttonText + '：' + clickCounter[buttonId] + ' time\n';
         clickCountsTextarea.value += ClickinfoForEveryButton;
         clickCountsTextarea.scrollTop = clickCountsTextarea.scrollHeight; // 滚动到文本框底部
         
     }
 
     function updateSignleButtonClickFull(buttonText, buttonId) {//当某一个元素满时显示
-        ClickinfoForButtonLimit = buttonText + '已经点击了' + clickCounter[buttonId] + ' 次，已经满了\n';
+        ClickinfoForButtonLimit = buttonText + '\nalready clicked' + clickCounter[buttonId] + ' times, it is already full\n';
         clickCountsTextarea.value += ClickinfoForButtonLimit;
         clickCountsTextarea.scrollTop = clickCountsTextarea.scrollHeight; // 滚动到文本框底部
     }
 
     function updateAllButtonClickFull() {//当全部点击用完时显示
-        ClickinfoForAllFull = '已经点击满了\n' ;
+        ClickinfoForAllFull = '\nIt is already full,no more click\n' ;
         clickCountsTextarea.value +=  ClickinfoForAllFull;
         clickCountsTextarea.scrollTop = clickCountsTextarea.scrollHeight; // 滚动到文本框底部
     }
 
     function updateTextareaForStageEnding(StageNumber){
         StageNumberNow = StageNumber - 1;
-        ClickinfoForStageEnding = '现在结束了阶段' + StageNumberNow + '要进入阶段' + StageNumber + '\n';
+        ClickinfoForStageEnding = '\nNow the stage ' + StageNumberNow + ' is over, enter the stage ' + StageNumber + '\n';
         clickCountsTextarea.value += ClickinfoForStageEnding;
         clickCountsTextarea.scrollTop = clickCountsTextarea.scrollHeight; // 滚动到文本框底部
         
@@ -289,7 +289,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     function updateTextareaForAllEnd(StageNumber){
         StageNumberNow = StageNumber - 1;
-        ClickinfoForStageEnding = '现在结束了阶段' + StageNumberNow + '，进入阶段' + StageNumber + '，最后结果如下\n';
+        ClickinfoForStageEnding = '\nNow the stage ' + StageNumberNow + ' is over, enter the stage ' + StageNumber + ', and the result is:\n';
         clickCountsTextarea.value += ClickinfoForStageEnding;
         clickCountsTextarea.scrollTop = clickCountsTextarea.scrollHeight; // 滚动到文本框底部
         
@@ -299,23 +299,23 @@ document.addEventListener('DOMContentLoaded', function(){
 
     function outPutStageSummary(stage){
         if (stage === 5){
-            clickCountsTextarea.value += `\n逆反指数是：` + ParadoxNumForElementRecord;
+            clickCountsTextarea.value += `\nThe rebellious index is:` + ParadoxNumForElementRecord;
             if (ParadoxNumForElementRecord < ParadoxNumForElementLimt){
-                clickCountsTextarea.value +=`逆反程度不高\n`;
+                clickCountsTextarea.value +=`\nThe degree of rebellion is not high, the education is successful\n`;
             }else{
-                clickCountsTextarea.value +=`逆反程度高,教育失败\n`;
+                clickCountsTextarea.value +=`\nThe degree of rebellion is high, the education is failed\n`;
             }
-            clickCountsTextarea.value +=`\n最终ta成为了:`;
+            clickCountsTextarea.value +=`\nIn the end, he/she became:`;
             for (var index in clickCounter){
-                clickCountsTextarea.value += '\n按钮 ' + (index + 1) + ': ' + clickCounter[index] + ' 次\n';
+                clickCountsTextarea.value += '\nClick button ' + (index + 1) + ': ' + clickCounter[index] + ' times\n';
             }
             clickCountsTextarea.scrollTop = clickCountsTextarea.scrollHeight; // 滚动到文本框底部
 
         }else{
             Stage = stage - 1;
-            clickCountsTextarea.value += `\n阶段 ${Stage} 点击次数汇总：\n`;
+            clickCountsTextarea.value += `\nStage ${Stage} click counts\n`;
             for (var index in clickCounter){
-                clickCountsTextarea.value += '\n按钮 ' + (index) + ': ' + clickCounter[index] + ' 次\n';
+                clickCountsTextarea.value += '\nClick button ' + (index + 1) + ': ' + clickCounter[index] + ' times\n';
             }
             
             clickCountsTextarea.scrollTop = clickCountsTextarea.scrollHeight; // 滚动到文本框底部
